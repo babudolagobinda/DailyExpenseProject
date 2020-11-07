@@ -1,0 +1,36 @@
+HTTrack3.49-2+htsswf+htsjava launched on Tue, 26 Jun 2018 21:01:16 at http://sensitive.adminbsb-themes.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://sensitive.adminbsb-themes.com/ -O1 "D:\Dolagobinda\ThemeForestTemplate" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+21:23:28	Warning: 	File not parsed, looks like binary: sensitive.adminbsb-themes.com/assets/plugins/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2
+21:23:28	Warning: 	File not parsed, looks like binary: sensitive.adminbsb-themes.com/assets/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0
+21:23:28	Warning: 	Retry after error -4 (Incorrect length (362685 Bytes, 490882 expected)) at link sensitive.adminbsb-themes.com/assets/images/signin-bg.jpg (from sensitive.adminbsb-themes.com/assets/css/style.css)
+21:23:29	Warning: 	Retry after error -4 (Incorrect length (2317131 Bytes, 3851837 expected)) at link sensitive.adminbsb-themes.com/assets/images/maintenance-bg.jpg (from sensitive.adminbsb-themes.com/assets/css/style.css)
+21:23:35	Warning: 	Retry after error -4 (Incorrect length (395627 Bytes, 496749 expected)) at link sensitive.adminbsb-themes.com/assets/images/cropit-demo.jpg (from sensitive.adminbsb-themes.com/pages/miscellaneous/profile.html)
+21:23:49	Warning: 	Retry after error -4 (Incorrect length (726325 Bytes, 841909 expected)) at link sensitive.adminbsb-themes.com/assets/images/animate-css-demo.jpg (from sensitive.adminbsb-themes.com/pages/ui/animations.html)
+21:23:49	Warning: 	Retry after error -4 (Incorrect length (728386 Bytes, 825760 expected)) at link sensitive.adminbsb-themes.com/assets/images/image-gallery/4.jpg (from sensitive.adminbsb-themes.com/pages/ui/thumbnails.html)
+21:23:50	Warning: 	Retry after error -4 (Incorrect length (662537 Bytes, 773411 expected)) at link sensitive.adminbsb-themes.com/assets/images/image-gallery/5.jpg (from sensitive.adminbsb-themes.com/pages/ui/thumbnails.html)
+21:24:05	Warning: 	Retry after error -4 (Incorrect length (466241 Bytes, 568718 expected)) at link sensitive.adminbsb-themes.com/assets/images/image-gallery/7.jpg (from sensitive.adminbsb-themes.com/pages/ui/thumbnails.html)
+21:24:07	Warning: 	Retry after error -4 (Incorrect length (861642 Bytes, 929808 expected)) at link sensitive.adminbsb-themes.com/assets/images/image-gallery/8.jpg (from sensitive.adminbsb-themes.com/pages/ui/thumbnails.html)
+21:24:39	Warning: 	Retry after error -4 (Incorrect length (925788 Bytes, 1034930 expected)) at link sensitive.adminbsb-themes.com/assets/images/image-gallery/11.jpg (from sensitive.adminbsb-themes.com/pages/medias/carousel.html)
+21:24:39	Warning: 	Retry after error -4 (Incorrect length (397676 Bytes, 474933 expected)) at link sensitive.adminbsb-themes.com/assets/images/image-gallery/12.jpg (from sensitive.adminbsb-themes.com/pages/medias/carousel.html)
+21:24:48	Warning: 	Retry after error -4 (Incorrect length (675704 Bytes, 1786454 expected)) at link sensitive.adminbsb-themes.com/assets/images/comparison-image/after.jpg (from sensitive.adminbsb-themes.com/pages/medias/image-comparison-slider.html)
+21:24:50	Warning: 	Retry after error -4 (Incorrect length (857943 Bytes, 965070 expected)) at link sensitive.adminbsb-themes.com/assets/images/comparison-image/before.jpg (from sensitive.adminbsb-themes.com/pages/medias/image-comparison-slider.html)
+21:25:01	Warning: 	Retry after error -4 (Incorrect length (470602 Bytes, 592867 expected)) at link sensitive.adminbsb-themes.com/assets/images/image-gallery/2.jpg (from sensitive.adminbsb-themes.com/pages/medias/lightbox-image-gallery.html)
+21:25:06	Warning: 	Retry after error -4 (Incorrect length (529046 Bytes, 644848 expected)) at link sensitive.adminbsb-themes.com/assets/images/image-gallery/13.jpg (from sensitive.adminbsb-themes.com/pages/medias/lightbox-image-gallery.html)
+21:25:21	Warning: 	Retry after error -4 (Incorrect length (438233 Bytes, 567780 expected)) at link sensitive.adminbsb-themes.com/assets/images/image-gallery/14.jpg (from sensitive.adminbsb-themes.com/pages/medias/lightbox-image-gallery.html)
+21:25:25	Warning: 	Retry after error -4 (Incorrect length (399491 Bytes, 515939 expected)) at link sensitive.adminbsb-themes.com/assets/images/image-gallery/16.jpg (from sensitive.adminbsb-themes.com/pages/medias/lightbox-image-gallery.html)
+21:25:35	Warning: 	Retry after error -4 (Incorrect length (512312 Bytes, 605109 expected)) at link sensitive.adminbsb-themes.com/assets/images/image-gallery/17.jpg (from sensitive.adminbsb-themes.com/pages/medias/lightbox-image-gallery.html)
+21:25:42	Warning: 	Retry after error -4 (Incorrect length (463123 Bytes, 579977 expected)) at link sensitive.adminbsb-themes.com/assets/images/image-gallery/20.jpg (from sensitive.adminbsb-themes.com/pages/medias/lightbox-image-gallery.html)
+21:25:46	Error: 	"Not Found" (404) at link sensitive.adminbsb-themes.com/assets/plugins/chartjs/dist/Chart.bundle.js (from sensitive.adminbsb-themes.com/pages/charts/chartjs.html)
+21:25:52	Warning: 	Retry after error -4 (Incorrect length (397096 Bytes, 497913 expected)) at link sensitive.adminbsb-themes.com/assets/images/ecommerce/product-detail/large/product2.jpg (from sensitive.adminbsb-themes.com/pages/ecommerce/product-detail.html)
+21:25:52	Error: 	"Not Found" (404) at link sensitive.adminbsb-themes.com/documents/= (from sensitive.adminbsb-themes.com/documents/index.html)
+21:25:52	Warning: 	Retry after error -4 (Incorrect length (3452273 Bytes, 3851837 expected)) at link sensitive.adminbsb-themes.com/assets/images/maintenance-bg.jpg (from sensitive.adminbsb-themes.com/assets/css/style.css)
+21:26:18	Warning: 	Retry after error -4 (Incorrect length (1356155 Bytes, 1786454 expected)) at link sensitive.adminbsb-themes.com/assets/images/comparison-image/after.jpg (from sensitive.adminbsb-themes.com/pages/medias/image-comparison-slider.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 25 minutes 26 seconds : 612 links scanned, 588 files written (47620588 bytes overall) [36263603 bytes received at 23763 bytes/sec], 15799035 bytes transferred using HTTP compression in 413 files, ratio 26%, 6.3 requests per connection
+(2 errors, 23 warnings, 0 messages)

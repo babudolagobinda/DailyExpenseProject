@@ -1,0 +1,916 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E159BCF9-9869-4F13-AC8F-80FC1ECA1F1B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DailyExpenditure.UI</RootNamespace>
+    <AssemblyName>DailyExpenditure.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\..\Workspace\EmployeeTaskTracking.UI\EmployeeTaskTracking.UI\bin\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\..\..\Workspace\EmployeeTaskTracking.UI\EmployeeTaskTracking.UI\bin\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.3.0\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.3.0\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.5.1\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.5.1\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.5.1\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.5.1\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.5.1\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.5.1\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Hubs\ChatHub.cs" />
+    <Compile Include="Models\UserDetailsModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="CustomScripts\AdvanceSearch.js" />
+    <Content Include="CustomScripts\ExpenseMaster.js" />
+    <Content Include="CustomScripts\Master.js" />
+    <Content Include="CustomScripts\SalaryMaster.js" />
+    <Content Include="CustomScripts\UserLogin.js" />
+    <Content Include="CustomScripts\UserRegister.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile2.pubxml" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.signalR-2.3.0.js" />
+    <Content Include="Scripts\jquery.signalR-2.3.0.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Template\backblue.gif" />
+    <Content Include="Template\cookies.txt" />
+    <Content Include="Template\fade.gif" />
+    <Content Include="Template\hts-cache\new.lst" />
+    <Content Include="Template\hts-cache\new.txt" />
+    <Content Include="Template\hts-cache\readme.txt" />
+    <Content Include="Template\hts-log.txt" />
+    <Content Include="Template\index.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\css\demo\setting-box.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\css\email-templates.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\css\style.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\css\themes\allthemes.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\css\themes\theme-default.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\agile-card-preview\agile-preview-1.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\agile-card-preview\agile-preview-2.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\animate-css-demo.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\avatars\face1.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\avatars\face10.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\avatars\face2.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\avatars\face3.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\avatars\face4.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\avatars\face5.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\avatars\face6.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\avatars\face7.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\avatars\face8.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\avatars\face9.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\bg-pattern.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\comparison-image\after.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\comparison-image\before.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\cover-image.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\cropit-demo.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\product-detail\large\product1.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\product-detail\large\product2.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\product-detail\large\product3.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\product-detail\large\product4.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\product-detail\large\product5.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\product-detail\large\product6.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\product-detail\large\product7.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\product-detail\large\product8.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\product-detail\product1.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\product-detail\product2.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\product-detail\product3.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\product-detail\product4.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\product-detail\product5.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\product-detail\product6.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\product-detail\product7.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\product-detail\product8.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\product-detail\thumb\product1.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\product-detail\thumb\product2.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\product-detail\thumb\product3.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\product-detail\thumb\product4.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\product-detail\thumb\product5.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\product-detail\thumb\product6.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\product-detail\thumb\product7.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\product-detail\thumb\product8.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\products\product-1.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\products\product-2.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\products\product-3.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\products\product-4.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\products\product-5.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\products\product-6.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\products\product-7.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\ecommerce\products\product-8.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\email-thumbs\email-thumb-1.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\email-thumbs\email-thumb-2.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\forgot-password-bg.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\1.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\10.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\11.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\12.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\13.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\14.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\15.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\16.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\17.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\18.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\19.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\2.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\20.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\3.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\4.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\5.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\6.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\7.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\8.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\9.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\thumb\thumb-1.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\thumb\thumb-10.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\thumb\thumb-11.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\thumb\thumb-12.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\thumb\thumb-13.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\thumb\thumb-14.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\thumb\thumb-15.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\thumb\thumb-16.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\thumb\thumb-17.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\thumb\thumb-18.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\thumb\thumb-19.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\thumb\thumb-2.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\thumb\thumb-20.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\thumb\thumb-3.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\thumb\thumb-4.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\thumb\thumb-5.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\thumb\thumb-6.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\thumb\thumb-7.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\thumb\thumb-8.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\image-gallery\thumb\thumb-9.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\maintenance-bg.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\signin-bg.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\images\signup-bg.jpg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\admin.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\demo.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\google-analytics.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\blog\post.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\changelogs.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\charts\c3.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\charts\chartjs.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\charts\flot.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\charts\jquery-knob.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\charts\morris.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\charts\peity.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\charts\rickshaw.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\charts\sparkline.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\dashboard\dashboard.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\dashboard\dashboard_v2.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\dashboard\dashboard_v3.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\dashboard\dashboard_v4.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\dashboard\dashboard_v5.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\ecommerce\cart.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\ecommerce\ecommerce.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\ecommerce\orders.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\ecommerce\product-detail.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\ecommerce\product-edit.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\ecommerce\product-list.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\examples\blank-page.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\examples\forgot-password.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\examples\invoice.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\examples\locked-screen.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\examples\maintenance.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\examples\search-result.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\examples\signin.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\examples\signup.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\examples\timeline.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\forms\advanced-form-elements.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\forms\autocomplete.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\forms\basic-form-elements.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\forms\editors.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\forms\form-examples.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\forms\form-validation.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\forms\form-wizard.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\forms\image-cropper-2.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\forms\image-cropper.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\forms\markdown.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\helper-classes.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\mailbox\compose-email.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\mailbox\email-templates.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\mailbox\email-view.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\mailbox\inbox.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\mailbox\outlook-view.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\maps\google-maps.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\maps\vector-map.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\maps\yandex-maps.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\medias\carousel.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\medias\content-slider.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\medias\grid-masonry.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\medias\image-comparison-slider.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\medias\owl-carousel.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\miscellaneous\agile-board.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\miscellaneous\bootstrap-tour.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\miscellaneous\calendar.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\miscellaneous\chat-dashboard.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\miscellaneous\code-editor.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\miscellaneous\contacts\contact-detail.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\miscellaneous\contacts\contact-grid.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\miscellaneous\contacts\contact-list.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\miscellaneous\faq.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\miscellaneous\favicon-bubble.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\miscellaneous\file-manager.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\miscellaneous\i18n.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\miscellaneous\idle-timer.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\miscellaneous\password-strength-meter.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\miscellaneous\profile.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\miscellaneous\text-diff.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\miscellaneous\todo-list.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\miscellaneous\tree-view.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\tables\editable-table.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\tables\footable.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\tables\jquery-datatables.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\tables\normal-tables.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\typography.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\ui\animations.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\ui\modals.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\ui\notifications.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\ui\skycons.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\ui\sortable-nestable.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\ui\tooltips-popovers.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\ui\ui.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\widgets\draggable.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\widgets\infobox-type-4.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\widgets\infobox-type-5.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\widgets\infobox.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\widgets\panel-with-loading.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\widgets\panel.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\js\pages\widgets\weather-station.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\animate-css\animate.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\autosize\dist\autosize.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap-colorpicker\dist\img\bootstrap-colorpicker\alpha-horizontal.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap-colorpicker\dist\img\bootstrap-colorpicker\alpha.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap-colorpicker\dist\img\bootstrap-colorpicker\hue-horizontal.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap-colorpicker\dist\img\bootstrap-colorpicker\hue.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap-colorpicker\dist\img\bootstrap-colorpicker\saturation.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap-colorpicker\dist\js\bootstrap-colorpicker.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap-daterangepicker\daterangepicker.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap-daterangepicker\daterangepicker.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap-markdown\css\bootstrap-markdown.min.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap-markdown\js\bootstrap-markdown.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap-select\dist\css\bootstrap-select.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap-select\dist\js\bootstrap-select.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap-tagsinput\dist\bootstrap-tagsinput.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap-tagsinput\dist\bootstrap-tagsinput.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap-tour\build\css\bootstrap-tour.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap-tour\build\js\bootstrap-tour.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap3-typeahead\bootstrap3-typeahead.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap\dist\fonts\glyphicons-halflings-regular.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\c3\c3.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\c3\c3.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\chartjs\dist\Chart.bundle.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\chosen\chosen-sprite%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\chosen\chosen-sprite.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\chosen\chosen.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\chosen\chosen.jquery.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\ckeditor\ckeditor.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\cocoen\dist\css\cocoen.min.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\cocoen\dist\js\cocoen.min.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\countdown\dest\jquery.countdown.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\cropit\dist\jquery.cropit.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\cropper\dist\cropper.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\cropper\dist\cropper.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\d3\d3.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\DataTables\extensions\export\buttons.bootstrap.min.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\DataTables\extensions\export\buttons.flash.min.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\DataTables\extensions\export\buttons.html5.min.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\DataTables\extensions\export\buttons.print.min.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\DataTables\extensions\export\dataTables.buttons.min.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\DataTables\extensions\export\jszip.min.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\DataTables\extensions\export\pdfmake.min.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\DataTables\extensions\export\vfs_fonts.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\DataTables\media\css\dataTables.bootstrap.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\DataTables\media\js\dataTables.bootstrap.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\DataTables\media\js\jquery.dataTables.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\diff-match-patch\diff-match-patch.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\dropzone\dist\dropzone.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\dropzone\dist\dropzone.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\editable-table\mindmup-editabletable.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\eonasdan-bootstrap-datetimepicker\build\css\bootstrap-datetimepicker.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\eonasdan-bootstrap-datetimepicker\src\js\bootstrap-datetimepicker.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\flot-spline\js\jquery.flot.spline.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\flot\jquery.flot.categories.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\flot\jquery.flot.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\flot\jquery.flot.time.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\font-awesome\fonts\fontawesome-webfont3e6e.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\font-awesome\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\footable\compiled\footable.bootstrap.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\footable\compiled\footable.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\fullcalendar\dist\fullcalendar.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\fullcalendar\dist\fullcalendar.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\gmaps\gmaps.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\i18next-1.11.2\i18next-1.11.2.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\icheck.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\flat\aero%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\flat\aero.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\flat\blue%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\flat\blue.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\flat\flat%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\flat\flat.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\flat\green%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\flat\green.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\flat\grey%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\flat\grey.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\flat\orange%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\flat\orange.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\flat\pink%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\flat\pink.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\flat\purple%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\flat\purple.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\flat\red%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\flat\red.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\flat\yellow%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\flat\yellow.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\flat\_all.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\minimal\aero%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\minimal\aero.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\minimal\blue%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\minimal\blue.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\minimal\green%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\minimal\green.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\minimal\grey%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\minimal\grey.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\minimal\minimal%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\minimal\minimal.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\minimal\orange%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\minimal\orange.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\minimal\pink%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\minimal\pink.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\minimal\purple%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\minimal\purple.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\minimal\red%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\minimal\red.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\minimal\yellow%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\minimal\yellow.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\minimal\_all.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\square\aero%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\square\aero.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\square\blue%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\square\blue.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\square\green%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\square\green.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\square\grey%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\square\grey.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\square\orange%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\square\orange.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\square\pink%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\square\pink.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\square\purple%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\square\purple.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\square\red%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\square\red.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\square\square%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\square\square.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\square\yellow%402x.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\square\yellow.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\iCheck\skins\square\_all.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\ionrangeslider\css\ion.rangeSlider.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\ionrangeslider\css\ion.rangeSlider.skinFlat.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\ionrangeslider\img\sprite-skin-flat.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\ionrangeslider\js\ion.rangeSlider.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jquery-countTo\jquery.countTo.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jquery-idletimer\dist\idle-timer.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jquery-knob\js\jquery.knob.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jquery-nestable\jquery.nestable.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jquery-slimscroll\jquery.slimscroll.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jquery-sparkline\dist\jquery.sparkline.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jquery-steps\build\jquery.steps.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jquery-ui\jquery-ui.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jquery-validation\dist\jquery.validate.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jquery.inputmask\dist\jquery.inputmask.bundle.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jquery.spinner\dist\css\bootstrap-spinner.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jquery.spinner\dist\js\jquery.spinner.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jquery2\jquery.min.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jquery\dist\jquery.min.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jstree\dist\jstree.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jstree\dist\themes\default\32px.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jstree\dist\themes\default\40px.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jstree\dist\themes\default\style.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jstree\dist\themes\default\throbber.gif" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\jquery-jvectormap.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\jquery-jvectormap.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\lib\jquery-mousewheel.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\abstract-canvas-element.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\abstract-element.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\abstract-shape-element.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\color-scale.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\data-series.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\jvectormap.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\legend.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\map-object.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\map.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\marker.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\numeric-scale.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\ordinal-scale.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\proj.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\region.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\simple-scale.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\svg-canvas-element.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\svg-circle-element.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\svg-element.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\svg-group-element.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\svg-image-element.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\svg-path-element.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\svg-shape-element.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\svg-text-element.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\vector-canvas.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\vml-canvas-element.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\vml-circle-element.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\vml-element.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\vml-group-element.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\vml-image-element.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\vml-path-element.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\src\vml-shape-element.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\jvectormap\tests\assets\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\lightbox2\dist\css\lightbox.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\lightbox2\dist\images\close.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\lightbox2\dist\images\loading.gif" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\lightbox2\dist\images\next.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\lightbox2\dist\images\prev.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\lightbox2\dist\js\lightbox.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\markdown-js\dist\markdown.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\masonry\dist\masonry.pkgd.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\metisMenu\dist\metisMenu.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\metisMenu\dist\metisMenu.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\moment\moment.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\morris.js\morris.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\morris.js\morris.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\multiselect\css\multi-select.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\multiselect\img\switch.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\multiselect\js\jquery.multi-select.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\nouislider\distribute\nouislider.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\nouislider\distribute\nouislider.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\owl-carousel2\dist\assets\owl.carousel.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\owl-carousel2\dist\assets\owl.theme.default.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\owl-carousel2\dist\assets\owl.video.play.png" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\owl-carousel2\dist\owl.carousel.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\pace\pace.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\pace\themes\white\pace-theme-flash.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\peity\jquery.peity.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\pretty-text-diff\jquery.pretty-text-diff.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\raphael\raphael.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\rickshaw\rickshaw.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\rickshaw\vendor\d3.v3.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\screenfull\src\screenfull.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\select2\dist\css\select2.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\select2\dist\js\select2.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\skycons\skycons.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\slick-carousel\slick\ajax-loader.gif" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\slick-carousel\slick\fonts\slick.svg" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\slick-carousel\slick\slick-theme.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\slick-carousel\slick\slick.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\slick-carousel\slick\slick.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\summernote\dist\summernote.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\summernote\dist\summernote.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\switchery\dist\switchery.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\switchery\dist\switchery.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\SyntaxHighlighter\scripts\shAutoloader.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\SyntaxHighlighter\scripts\shCore.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\SyntaxHighlighter\scripts\XRegExp.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\SyntaxHighlighter\styles\shCore.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\SyntaxHighlighter\styles\shThemeDefault.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\tinycon\tinycon.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\tinymce\tinymce.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\toastr\toastr.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\toastr\toastr.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\wait-me\src\waitMe.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\wait-me\src\waitMe.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\wnumb\wNumb.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\zxcvbn\dist\zxcvbn.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\sweetalert\sweetalert-dev.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\sweetalert\sweetalert.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\sweetalert\sweetalert.min.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\documents\=.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\documents\css\documentation.css" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\documents\index.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\documents\js\angular-route.min.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\documents\js\angular.min.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\documents\js\app.js" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\favicon.ico" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\index-2.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\index.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\blog\posts.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\blog\single-post.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\changelogs.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\charts\c3.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\charts\chartjs.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\charts\flot.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\charts\jquery-knob.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\charts\morris.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\charts\peity.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\charts\rickshaw.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\charts\sparkline.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\dashboard\dashboard-2.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\dashboard\dashboard-3.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\dashboard\dashboard-4.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\dashboard\dashboard-5.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ecommerce\cart.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ecommerce\orders.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ecommerce\payment.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ecommerce\pricing-table.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ecommerce\product-detail.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ecommerce\product-edit.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ecommerce\product-grid.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ecommerce\product-list.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\email-templates\action.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\email-templates\alert.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\email-templates\billing.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\examples\403.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\examples\404.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\examples\500.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\examples\blank-page.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\examples\forgot-password.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\examples\invoice-print.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\examples\invoice.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\examples\locked-screen.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\examples\maintenance.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\examples\search-result.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\examples\sign-in.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\examples\sign-up.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\examples\timeline.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\forms\advanced-form-elements.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\forms\autocomplete.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\forms\basic-form-elements.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\forms\editors.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\forms\form-examples.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\forms\form-validation.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\forms\form-wizard.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\forms\image-cropper\image-cropper-1.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\forms\image-cropper\image-cropper-2.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\forms\markdown.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\helper-classes.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\mailbox\compose-email.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\mailbox\email-templates.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\mailbox\email-view.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\mailbox\inbox.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\mailbox\outlook-view.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\maps\google-maps.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\maps\vector-map.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\maps\yandex-maps.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\medias\carousel.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\medias\content-slider.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\medias\grid-masonry.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\medias\image-comparison-slider.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\medias\lightbox-image-gallery.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\medias\owl-carousel.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\miscellaneous\agile-board.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\miscellaneous\bootstrap-tour.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\miscellaneous\calendar.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\miscellaneous\chat-dashboard.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\miscellaneous\code-editor.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\miscellaneous\contacts\contact-detail.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\miscellaneous\contacts\contact-grid.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\miscellaneous\contacts\contact-list.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\miscellaneous\faq.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\miscellaneous\favicon-bubble.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\miscellaneous\file-manager.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\miscellaneous\i18n.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\miscellaneous\idle-timer.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\miscellaneous\password-strength-meter.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\miscellaneous\profile.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\miscellaneous\text-diff.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\miscellaneous\todo-list.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\miscellaneous\tree-view.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\tables\editable-table.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\tables\footable.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\tables\jquery-datatables.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\tables\normal-tables.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\typography.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ui\accordion.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ui\alerts.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ui\animations.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ui\badges.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ui\breadcrumbs.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ui\buttons.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ui\collapse.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ui\colors.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ui\icons\font-awesome.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ui\icons\google-material-icons.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ui\icons\skycons.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ui\labels.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ui\list-group.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ui\media-object.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ui\modals.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ui\notifications.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ui\pagination-pager.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ui\progress-bars.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ui\sortable-nestable.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ui\tabs.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ui\thumbnails.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ui\tooltips-popovers.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\ui\video.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\widgets\infobox\infobox-1.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\widgets\infobox\infobox-2.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\widgets\infobox\infobox-3.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\widgets\infobox\infobox-4.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\widgets\infobox\infobox-5.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\widgets\panels\basic.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\widgets\panels\colored.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\widgets\panels\draggable.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\widgets\panels\no-header.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\widgets\panels\panel-with-loading.html" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\pages\widgets\weather-station.html" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Register.cshtml" />
+    <Content Include="Views\User\DashBoard.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\User\ExpenseMaster.cshtml" />
+    <Content Include="Template\hts-cache\doit.log" />
+    <Content Include="Template\hts-cache\new.zip" />
+    <Content Include="Template\hts-cache\winprofile.ini" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\bootstrap\dist\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\font-awesome\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\font-awesome\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\font-awesome\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\font-awesome\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\slick-carousel\slick\fonts\slick.eot" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\slick-carousel\slick\fonts\slick.ttf" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\slick-carousel\slick\fonts\slick.woff" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\slick-carousel\slick\fonts\slickd41d.eot" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\summernote\dist\font\summernoted41d.eot" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\summernote\dist\font\summernotef534.eot" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\summernote\dist\font\summernotef534.ttf" />
+    <Content Include="Template\sensitive.adminbsb-themes.com\assets\plugins\summernote\dist\font\summernotef534.woff" />
+    <Content Include="Views\User\SalaryMaster.cshtml" />
+    <Content Include="Views\User\AdvanceSearch.cshtml" />
+    <Content Include="Views\User\LiveChat.cshtml" />
+    <Content Include="Views\User\ForgotPassword.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="UploadFiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DailyExpenditure.DAL\DailyExpenditure.DAL.csproj">
+      <Project>{aad1ee0b-a036-466f-aee4-fff379c74019}</Project>
+      <Name>DailyExpenditure.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56070</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58030/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
